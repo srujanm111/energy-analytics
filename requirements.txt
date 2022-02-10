@@ -1,0 +1,16 @@
+certifi
+chardet
+click
+cmake
+dotmap
+face-recognition
+face-recognition-models
+idna
+imutils
+numpy
+opencv-python
+Pillow
+requests
+tqdm
+urllib3
+wincertstore

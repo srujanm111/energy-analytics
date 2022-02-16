@@ -13,6 +13,10 @@ touch "$processed_files"
 # create output directories if needed
 mkdir "$masked_faces_dir" "$segmentation_masks_dir"
 
+# face mask configurations
+mask_type_list=( 'surgical' 'KN95' 'cloth' )
+mask_colors_list=( '#0473e2' '#000000' '#ffffff' '#1fc49b' )
+
 # function that takes an image of an unmasked face as input,
 # and outputs the masked face image and segmentation mask
 generate_images () {
@@ -22,8 +26,8 @@ generate_images () {
     segmentation_mask_img_path="$segmentation_masks_dir/$img_name"
 
     # TODO randomize mask type and color
-    mask_type='surgical'
-    color='#0473e2'
+    mask_type=${mask_type_list[$(( RANDOM % 3 + 1 ))]}
+    color=${mask_colors_list[$(( RANDOM % 4 + 1 ))]}
 
     # generate masked face image, then generate segmentation mask
     # only if a a face was detected in the input image

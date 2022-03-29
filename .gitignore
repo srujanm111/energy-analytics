@@ -1,7 +1,7 @@
 .DS_Store
 venv
-mask-the-face/dlib_models
-mask-the-face/utils/__pycache__
+mask_the_face/dlib_models
+mask_the_face/utils/__pycache__
 dataset/celeba
 dataset/masked_faces
 dataset/segmentation_masks
